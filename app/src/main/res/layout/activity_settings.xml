@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/puja_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_topbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                style="@style/PujaSection"
+                android:text="🔑 Gemini API configuration" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Gemini API key"
+                app:endIconMode="password_toggle"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etApiKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Model (jaise gemini-2.5-flash)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGetKey"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="Key kaise milegi?" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:text="✔ Test karo" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/PujaSection"
+                android:text="🧠 AI behaviour" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="System prompt (PUJA ka swabhav)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPrompt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:minLines="4" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnResetPrompt"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Default prompt wapas lao" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switchMemory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Approved memory AI ko do"
+                android:textColor="@color/puja_text" />
+
+            <TextView
+                style="@style/PujaSection"
+                android:text="🎙️ Voice" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switchVoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Awaaz me jawab bolo"
+                android:textColor="@color/puja_text" />
+
+            <RadioGroup
+                android:id="@+id/rgLang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbHi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="हिन्दी (hi-IN)" />
+
+                <RadioButton
+                    android:id="@+id/rbEnIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="English India (en-IN)" />
+
+                <RadioButton
+                    android:id="@+id/rbEnUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="English US (en-US)" />
+            </RadioGroup>
+
+            <TextView
+                style="@style/PujaSection"
+                android:text="🎨 Theme" />
+
+            <RadioGroup
+                android:id="@+id/rgTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dark" />
+
+                <RadioButton
+                    android:id="@+id/rbLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Light" />
+
+                <RadioButton
+                    android:id="@+id/rbSystem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Phone ke hisaab se" />
+            </RadioGroup>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="💾 Save karo" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

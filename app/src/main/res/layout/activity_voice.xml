@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/puja_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_topbar" />
+
+    <TextView
+        android:id="@+id/voiceStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Mic dabao aur bolo"
+        android:textColor="@color/puja_text"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/voiceTranscript"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:minHeight="44dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:textColor="@color/puja_text_dim"
+        android:textSize="16sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp">
+
+        <View
+            android:id="@+id/pulseRing"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_ring"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/btnMic"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_mic"
+            android:contentDescription="Mic"
+            android:padding="34dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_mic" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/voiceReply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textColor="@color/puja_text"
+            android:textIsSelectable="true"
+            android:textSize="16sp" />
+    </ScrollView>
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switchSpeak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="Awaaz me jawab do"
+        android:textColor="@color/puja_text" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Try karo: “YouTube kholo”, “Alarm 7 baje lagao”, “Mujhe Python ka code likh kar do”"
+        android:textColor="@color/puja_text_dim"
+        android:textSize="12sp" />
+</LinearLayout>

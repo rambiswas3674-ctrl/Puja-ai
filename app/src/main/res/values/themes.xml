@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Puja" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/puja_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/puja_accent</item>
+        <item name="colorSurface">@color/puja_surface</item>
+        <item name="colorOnSurface">@color/puja_text</item>
+        <item name="android:windowBackground">@color/puja_bg</item>
+        <item name="android:statusBarColor">@color/puja_bg</item>
+        <item name="android:navigationBarColor">@color/puja_bg</item>
+        <item name="android:windowLightStatusBar">@bool/light_bars</item>
+    </style>
+
+    <style name="PujaChip">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:background">@drawable/bg_chip</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textColor">@color/puja_text</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="PujaSection">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textColor">@color/puja_primary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

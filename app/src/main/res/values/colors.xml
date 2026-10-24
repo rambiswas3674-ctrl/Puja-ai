@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="puja_bg">#F6F2FF</color>
+    <color name="puja_surface">#FFFFFF</color>
+    <color name="puja_text">#1B1530</color>
+    <color name="puja_text_dim">#6B6485</color>
+    <color name="puja_primary">#7C3AED</color>
+    <color name="puja_accent">#3B82F6</color>
+    <color name="puja_bubble_ai">#EDE7FF</color>
+    <color name="puja_stroke">#D9CFF5</color>
+    <color name="puja_error">#D93F45</color>
+    <color name="puja_success">#1F9D62</color>
+</resources>
